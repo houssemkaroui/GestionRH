@@ -1,6 +1,4 @@
 import React, { useEffect, useContext, useState } from 'react';
-import { Line, Radar } from 'react-chartjs-2';
-import Carousel from 'react-bootstrap/Carousel'
 import { AppContext } from "../components/contextapi"
 import { AuthProvider } from "../context"
 import Table from 'react-bootstrap/Table'
@@ -9,6 +7,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
+import Alert from 'react-bootstrap/Alert'
 function Utilisateur() {
   const [message, setMessage] = React.useContext(AppContext);
 
@@ -17,9 +16,12 @@ function Utilisateur() {
   }, [])
 
   const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
 
   return (
     <div className='utilisateur' style={{ marginTop: 30, marginLeft: 30 }}>
@@ -28,6 +30,12 @@ function Utilisateur() {
           <Button variant="primary" onClick={handleShow}>Ajouter Utilisateur</Button>
         </Col>
       </Row>
+      <Alert variant='primary' style={{marginTop:20,position:'inherit'}}>
+        <p style={{color:'black'}}>
+        La liste de tous les utilisateurs
+        </p>
+      </Alert>
+
       <Row>
         <Col sm={12}>
           <Table striped bordered hover style={{ marginTop: 20 }}>
@@ -47,9 +55,9 @@ function Utilisateur() {
                 <td>Otto</td>
                 <td>@mdo</td>
                 <td>
-                
-                <img style={{cursor:'pointer'}} src="https://img.icons8.com/fluency/48/000000/filled-trash.png"/>
-                <img style={{cursor:'pointer'}} src="https://img.icons8.com/color/48/000000/edit--v1.png"/>
+
+                  <img style={{ cursor: 'pointer' }} onClick={handleShow2} src="https://img.icons8.com/fluency/48/000000/filled-trash.png" />
+                  <img style={{ cursor: 'pointer' }} src="https://img.icons8.com/color/48/000000/edit--v1.png" />
                 </td>
               </tr>
               <tr>
@@ -58,8 +66,8 @@ function Utilisateur() {
                 <td>Thornton</td>
                 <td>@fat</td>
                 <td>
-                <img src="https://img.icons8.com/fluency/48/000000/filled-trash.png"/>
-                <img src="https://img.icons8.com/color/48/000000/edit--v1.png"/>
+                  <img src="https://img.icons8.com/fluency/48/000000/filled-trash.png" />
+                  <img src="https://img.icons8.com/color/48/000000/edit--v1.png" />
                 </td>
               </tr>
             </tbody>
@@ -95,6 +103,24 @@ function Utilisateur() {
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={show2} onHide={handleClose2}>
+        <Modal.Header closeButton>
+          <Modal.Title>Ajouter un Utilisateur</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Etes-vous sûr de vouloir supprimer ?
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose2}>
+            Close
+          </Button>
+          <Button variant="danger" onClick={handleClose2}>
+            Delete
           </Button>
         </Modal.Footer>
       </Modal>

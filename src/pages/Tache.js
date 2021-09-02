@@ -1,14 +1,16 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { Line, Radar } from 'react-chartjs-2';
 import Carousel from 'react-bootstrap/Carousel'
-import { AppContext } from "../components/contextapi"
+import { AppContext } from "../components/contextapi";
 import { AuthProvider } from "../context"
-import Table from 'react-bootstrap/Table'
-import Button from 'react-bootstrap/Button'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Modal from 'react-bootstrap/Modal'
-import Form from 'react-bootstrap/Form'
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
+
 function Tache() {
     const [message, setMessage] = React.useContext(AppContext);
 
@@ -28,6 +30,11 @@ function Tache() {
                     <Button variant="primary" onClick={handleShow}>Ajouter Tache</Button>
                 </Col>
             </Row>
+            <Alert variant='primary' style={{marginTop:20,position:'inherit'}}>
+        <p style={{color:'black'}}>
+        La liste de tous les Taches
+        </p>
+      </Alert>
             <Row>
                 <Col sm={12}>
                     <Table striped bordered hover style={{ marginTop: 20 }}>

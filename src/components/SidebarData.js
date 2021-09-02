@@ -7,32 +7,32 @@ export const SidebarData = [
   {
     title: 'Conge',
     path: '/Conge',
-    icon: <AiIcons.AiFillHome />,
+    icon: <AiIcons.AiTwotoneCalendar />,
     cName: 'nav-text'
   },
   {
     title: 'Absence',
     path: '/Absence',
-    icon: <AiIcons.AiFillHome />,
+    icon: <AiIcons.AiTwotoneUpSquare />,
     cName: 'nav-text'
   },
   {
     title: 'Recrutement',
     path: '/Recrutement',
-    icon: <AiIcons.AiFillHome />,
+    icon: <AiIcons.AiTwotoneFolder />,
     cName: 'nav-text'
   },
 
   {
     title: 'Utilisateur',
     path: '/Utilisateur',
-    icon: <AiIcons.AiFillHome />,
+    icon: <AiIcons.AiOutlineUserAdd />,
     cName: 'nav-text'
   },
   {
     title: 'Tache',
     path: '/Tache',
-    icon: <AiIcons.AiFillHome />,
+    icon: <AiIcons.AiOutlineReconciliation/>,
     cName: 'nav-text'
   },
   

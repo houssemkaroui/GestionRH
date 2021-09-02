@@ -1,5 +1,4 @@
-const ROOT_URL = 'http://localhost:3111/api/v1/users';
-
+const ROOT_URL = 'http://expertimmo.cubesolutions.tn:5002/api/v1/users';
 export async function loginUser(dispatch, loginPayload) {
 	const requestOptions = {
 		method: 'POST',

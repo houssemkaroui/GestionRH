@@ -103,6 +103,7 @@ bForm {
   height: 800;
   margin-inline: auto;
   margin-top: 30px;
+  background-color: rgb(50, 102, 199);
 }
 .iconbar {
   margin-inline-start: auto;
@@ -199,5 +200,8 @@ margin-top: 0.5em;
 }
 
 .hid {
+  position: inherit;
+}
+.alert{
   position: inherit;
 }

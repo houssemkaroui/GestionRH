@@ -52,7 +52,7 @@ useEffect(() =>{
       <br></br>
 
 
-      <Card className="card2" >
+      <Card className="card2" style={{backgroundColor:"#3e77dc"}}>
 
         <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -71,8 +71,8 @@ useEffect(() =>{
              
             </div>
             <div>
-              <Link to="/Register" >Register</Link>
-              <Link to="/reset_Password" style={{ marginLeft: 300 }}>Forget Password</Link>
+              <Link to="/Register" style={{color:"CaptionText"}}>Register</Link>
+              {/* <Link to="/reset_Password" style={{ marginLeft: 300 }}>Forget Password</Link> */}
 
             </div>
 
